@@ -1,0 +1,31 @@
+Authentication
+-How is the web app authenticating users?
+-If a token is being used..
+  -what kind?
+  -when does it expire?
+
+Content-Type Conversion
+-Are you able to modify the content-type? 
+
+HTTP Verb Tampering
+-Are you able to modify the HTTP verb (POST, DELETE, etc)? 
+  -NOTE: You can use Intruder to run this
+  -TODO: Create a list of the verbs for easy copy/paste option
+
+CORS
+
+Command Injection
+-Command injection does not always have to be in the form of php?cmd=whoami
+-Intercept request and modify various variables
+-Examples of injection commands: ";ls", "||whoami||"
+  -NOTE: Remember to inject commands based on the endpoint OS
+
+Input Validation
+-Similar to command injection, look for parameters to enter HTML in. Does it return "not accepted" or does it process it? 
+
+JWT Token Manipulation
+-If using a JWT token can you modify the encryption type in Decoder (Burp)
+-Can you dump the JWT into a .txt file and run against johntheripper? 
+
+Rate Limiting
+-Are you able to fuzz without any sort of stop in place? 
